@@ -135,6 +135,92 @@ RSpec.describe Esql do
             end
           end
         end
+
+        describe '<' do
+          {
+            '1 < 2' => 1,
+            '2 < 1' => 0
+          }.each do |expr, value|
+            context expr do
+              let(:expression) { expr }
+              it 'returns correct value' do
+                expect(evaluated_value).to eq(value)
+              end
+            end
+          end
+        end
+
+        describe '<=' do
+          {
+            '1 <= 2' => 1,
+            '2 <= 2' => 1,
+            '2 <= 1' => 0
+          }.each do |expr, value|
+            context expr do
+              let(:expression) { expr }
+              it 'returns correct value' do
+                expect(evaluated_value).to eq(value)
+              end
+            end
+          end
+        end
+
+        describe '>' do
+          {
+            '1 > 2' => 0,
+            '2 > 1' => 1
+          }.each do |expr, value|
+            context expr do
+              let(:expression) { expr }
+              it 'returns correct value' do
+                expect(evaluated_value).to eq(value)
+              end
+            end
+          end
+        end
+
+        describe '>=' do
+          {
+            '1 >= 2' => 0,
+            '2 >= 2' => 1,
+            '2 >= 1' => 1
+          }.each do |expr, value|
+            context expr do
+              let(:expression) { expr }
+              it 'returns correct value' do
+                expect(evaluated_value).to eq(value)
+              end
+            end
+          end
+        end
+
+        describe '==' do
+          {
+            '1 == 2' => 0,
+            '2 == 2' => 1
+          }.each do |expr, value|
+            context expr do
+              let(:expression) { expr }
+              it 'returns correct value' do
+                expect(evaluated_value).to eq(value)
+              end
+            end
+          end
+        end
+
+        describe '!=' do
+          {
+            '1 != 2' => 1,
+            '2 != 2' => 0
+          }.each do |expr, value|
+            context expr do
+              let(:expression) { expr }
+              it 'returns correct value' do
+                expect(evaluated_value).to eq(value)
+              end
+            end
+          end
+        end
       end
 
       describe 'functions' do
