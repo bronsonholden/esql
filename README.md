@@ -90,6 +90,42 @@ Errors that get past this simple check layer (like type mismatches or even
 query runtime errors) will bubble up as ActiveRecord exceptions that you'll
 have to handle yourself.
 
+# Operators
+
+* Arithmetic
+  * Multiplication: *
+  * Division: /
+  * Addition: +
+  * Subtraction: -
+* Logical
+  * Less than: <
+  * Less than or equal: <=
+  * Greater than: >
+  * Greater than or equal: >=
+
+# Attributes
+
+Attributes are referenced using the column name, e.g. `first_name`. Note that
+the attribute must exist on the model in your scope, otherwise an error will
+be raised.
+
+# Related attributes
+
+You can use values on related records using the dot operator, e.g.
+`employee.first_name`. This essentially calls `joins` on your scope with the
+given relationship, as long as it is valid. The attribute must exist on the
+related model, otherwise an error will be raised.
+
+# Related aggregates
+
+You can retrieve aggregates on related records, also using the dot operator,
+e.g. `employees.count`. This `joins` a subquery, so keep that in mind.
+
+# Functions
+
+* String functions:
+  * concat(arg1, arg2, ...)
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then,
