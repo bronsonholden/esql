@@ -33,24 +33,6 @@ RSpec.describe Esql do
           end
         end
 
-        describe 'booleans' do
-          # Heads up if testing outside of SQLite3: some databases serialize
-          # Boolean values as 't' and 'f'.
-          context 'true' do
-            let(:expression) { 'true' }
-            it 'returns correct value' do
-              expect(evaluated_value).to eq(1)
-            end
-          end
-
-          context 'false' do
-            let(:expression) { 'false' }
-            it 'returns correct value' do
-              expect(evaluated_value).to eq(0)
-            end
-          end
-        end
-
         describe 'strings' do
           [
             'string',

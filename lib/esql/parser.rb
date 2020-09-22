@@ -35,7 +35,6 @@ module Esql
       :function,
       :string,
       :number,
-      :boolean,
       :related_count,
       :related_attribute,
       :attribute
@@ -129,12 +128,6 @@ module Esql
     end
 
     rule :number, /-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?/ do
-      def evaluate(scope)
-        return scope, self.text
-      end
-    end
-
-    rule :boolean, /(true|false)/ do
       def evaluate(scope)
         return scope, self.text
       end
