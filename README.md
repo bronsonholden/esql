@@ -1,6 +1,6 @@
 # esql
 
-[![Gem Version](https://badge.fury.io/rb/esql.svg)](https://badge.fury.io/rb/esql) [![Build Status](https://travis-ci.org/paulholden2/esql.svg?branch=master)](https://travis-ci.org/paulholden2/esql) [![Inline docs](http://inch-ci.org/github/paulholden2/esql.svg?branch=master)](http://inch-ci.org/github/paulholden2/esql)
+[![Gem Version](https://badge.fury.io/rb/esql.svg)](https://badge.fury.io/rb/esql) [![Build Status](https://travis-ci.org/paulholden2/esql.svg?branch=master)](https://travis-ci.org/paulholden2/esql) [![Inline docs](http://inch-ci.org/github/paulholden2/esql.svg?branch=master)](http://inch-ci.org/github/paulholden2/esql) [![Maintainability](https://api.codeclimate.com/v1/badges/4f692613b1029ed5b0eb/maintainability)](https://codeclimate.com/github/paulholden2/esql/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/4f692613b1029ed5b0eb/test_coverage)](https://codeclimate.com/github/paulholden2/esql/test_coverage)
 
 Esql is a library for ActiveRecord scoping using simple expressions.
 
