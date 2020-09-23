@@ -1,5 +1,7 @@
 # esql
 
+[![Gem Version](https://badge.fury.io/rb/esql.svg)](https://badge.fury.io/rb/esql) [![Build Status](https://travis-ci.org/paulholden2/esql.svg?branch=master)](https://travis-ci.org/paulholden2/esql) [![Inline docs](http://inch-ci.org/github/paulholden2/esql.svg?branch=master)](http://inch-ci.org/github/paulholden2/esql)
+
 Esql is a library for ActiveRecord scoping using simple expressions.
 
 ## Installation
