@@ -1,6 +1,5 @@
 ---
 language: ruby
-cache: bundler
 rvm:
   - 2.6.0
 before_script:
@@ -12,3 +11,5 @@ script:
 after_script:
   - ./cc-test-reporter after-build -t simplecov --exit-code $TRAVIS_TEST_RESULT
 before_install: gem install bundler -v 2.1.4
+install:
+  - bundle
