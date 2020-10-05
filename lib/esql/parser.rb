@@ -32,6 +32,7 @@ module Esql
     end
 
     rule :atom, any(
+      :null,
       :function,
       :string,
       :number,
@@ -39,6 +40,12 @@ module Esql
       :related_attribute,
       :attribute
     )
+
+    rule :null, /null/i do
+      def evaluate(scope)
+        return scope, "null"
+      end
+    end
 
     rule :function, :attribute, '(', many?(:atom, ','), ')' do
       def evaluate(scope)

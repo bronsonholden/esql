@@ -18,6 +18,14 @@ RSpec.describe Esql do
       }
 
       describe 'literals' do
+        describe 'null' do
+          let(:expression) { 'null' }
+
+          it 'returns correct value' do
+            expect(evaluated_value).to be_nil
+          end
+        end
+
         describe 'numbers' do
           {
             '1' => 1,
